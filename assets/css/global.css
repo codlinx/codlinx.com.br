@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    --primary-color: #000000;
+
+    --primary-text-color: #000000;
+    --secondary-text-color: #212121;
+    
+    --button-text-color-primary: #ffffff;
+    
+    --nav-color: #FBFBFB;
+    --nav-text-link: #3f3f3f;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+
+    /* border: red solid 0.1px; */
+}
+
+html, body{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.pulse {
+    animation: pulse 1s infinite;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+
+.pulse-bg {
+	animation: pulse-bg 2s infinite;
+	-webkit-animation-name: pulse-bg;
+	animation-name: pulse-bg;
+}
+  
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+    }
+}
+  
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+}
+
+@-webkit-keyframes pulse {
+	from{
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	to{
+		transform: scale(1.8);
+		opacity: 0;
+	}
+}
+
+@keyframes pulse-bg {
+	from{
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	to{
+		transform: scale(1.8);
+		opacity: 0;
+	}
+}
