@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Codlinx — Software Corporativo",
+    "short_name": "Codlinx",
+    "description": "Soluções de software personalizadas para empresas",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -8,7 +9,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    "theme_color": "#1e40af",
+    "background_color": "#f8fafc",
+    "display": "standalone",
+    "start_url": "/"
 }
