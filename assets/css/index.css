@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Self-hosted Inter (latin-ext covers Portuguese accented chars) */
 @font-face {
   font-family: 'Inter';
