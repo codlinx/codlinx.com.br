@@ -117,7 +117,19 @@
         }
     </script>
 
-    <script src="//code.jivosite.com/widget/prtgOr2DWD" async></script>
+    <script>
+        // Carrega JivoSite apenas após interação do usuário (melhora LCP/TBT)
+        function loadJivo() {
+            var s = document.createElement('script');
+            s.src = '//code.jivosite.com/widget/prtgOr2DWD';
+            s.async = true;
+            document.head.appendChild(s);
+        }
+        window.addEventListener('scroll', loadJivo, { once: true, passive: true });
+        window.addEventListener('mousemove', loadJivo, { once: true, passive: true });
+        window.addEventListener('touchstart', loadJivo, { once: true, passive: true });
+        setTimeout(loadJivo, 5000);
+    </script>
 </head>
 
 <body class="bg-gray-50">
@@ -134,7 +146,7 @@
 
                     <div>
                         <a href="/">
-                            <img src="assets/img/logo3.png" alt="Codlinx - Software Corporativo para Empresas" width="160" height="40">
+                            <img src="assets/img/logo3.png" alt="Codlinx - Software Corporativo para Empresas" width="160" height="40" fetchpriority="high">
                         </a>
                     </div>
                 </div>
@@ -148,7 +160,7 @@
                     <a href="#contato" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm">Falar com Especialista</a>
                 </div>
 
-                <button class="md:hidden text-gray-700" onclick="toggleMenu()">
+                <button class="md:hidden text-gray-700" onclick="toggleMenu()" aria-label="Abrir menu de navegação" aria-expanded="false">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -209,7 +221,7 @@
                             <div class="text-sm font-medium text-blue-200">Parceiro Oficial Microsoft</div>
                         </div>
 
-                        <h3 class="text-xl font-semibold mb-8 text-center">Nossos Diferenciais</h3>
+                        <h2 class="text-xl font-semibold mb-8 text-center">Nossos Diferenciais</h2>
                         <div class="grid grid-cols-2 gap-6">
                             <div
                                 class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift border border-white/10">
@@ -228,7 +240,7 @@
                             <div
                                 class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift border border-white/10">
                                 <div class="mb-4 flex justify-center">
-                                    <img src="./assets/img/icons/microsoft.png" alt="Microsoft 365" class="w-12 h-12">
+                                    <img src="./assets/img/icons/microsoft.png" alt="Microsoft 365" class="w-12 h-12" width="48" height="48" loading="lazy">
                                 </div>
                                 <div class="text-sm font-medium">Microsoft 365</div>
                             </div>
@@ -583,7 +595,7 @@
 
                     <div class="text-center bg-white rounded-lg p-4">
                         <img src="./assets/img/icons/microsoft-partner.png" alt="Microsoft 365 Partner"
-                            class="w-45 h-20 mx-auto mb-2">
+                            class="w-45 h-20 mx-auto mb-2" width="180" height="80" loading="lazy">
                     </div>
                 </div>
                 <p class="text-xl text-blue-100 max-w-3xl mx-auto fade-in">
@@ -656,42 +668,42 @@
                             <div class="text-center group">
                                 <div
                                     class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
-                                    <img src="./assets/img/icons/word.svg" alt="Word" class="w-8 h-8">
+                                    <img src="./assets/img/icons/word.svg" alt="Word" class="w-8 h-8" width="32" height="32" loading="lazy">
                                 </div>
                                 <div class="text-xs font-semibold">Word</div>
                             </div>
                             <div class="text-center group">
                                 <div
                                     class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
-                                    <img src="./assets/img/icons/excel.png" alt="Excel" class="w-8 h-8">
+                                    <img src="./assets/img/icons/excel.png" alt="Excel" class="w-8 h-8" width="32" height="32" loading="lazy">
                                 </div>
                                 <div class="text-xs font-semibold">Excel</div>
                             </div>
                             <div class="text-center group">
                                 <div
                                     class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
-                                    <img src="./assets/img/icons/powerpoint.svg" alt="PowerPoint" class="w-8 h-8">
+                                    <img src="./assets/img/icons/powerpoint.svg" alt="PowerPoint" class="w-8 h-8" width="32" height="32" loading="lazy">
                                 </div>
                                 <div class="text-xs font-semibold">PPT</div>
                             </div>
                             <div class="text-center group">
                                 <div
                                     class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
-                                    <img src="./assets/img/icons/outlook.png" alt="Outlook" class="w-8 h-8">
+                                    <img src="./assets/img/icons/outlook.png" alt="Outlook" class="w-8 h-8" width="32" height="32" loading="lazy">
                                 </div>
                                 <div class="text-xs font-semibold">Outlook</div>
                             </div>
                             <div class="text-center group">
                                 <div
                                     class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
-                                    <img src="./assets/img/icons/teams.png" alt="Teams" class="w-8 h-8">
+                                    <img src="./assets/img/icons/teams.png" alt="Teams" class="w-8 h-8" width="32" height="32" loading="lazy">
                                 </div>
                                 <div class="text-xs font-semibold">Teams</div>
                             </div>
                             <div class="text-center group">
                                 <div
                                     class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
-                                    <img src="./assets/img/icons/onedrive.svg" alt="OneDrive" class="w-8 h-8">
+                                    <img src="./assets/img/icons/onedrive.svg" alt="OneDrive" class="w-8 h-8" width="32" height="32" loading="lazy">
                                 </div>
                                 <div class="text-xs font-semibold">OneDrive</div>
                             </div>
@@ -1260,8 +1272,8 @@
                             </div>
 
                             <div>
-                                <label class="block text-gray-700 font-medium mb-2">Tipo de Solução</label>
-                                <select name="solution_type"
+                                <label for="solution_type" class="block text-gray-700 font-medium mb-2">Tipo de Solução</label>
+                                <select id="solution_type" name="solution_type"
                                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                                     <option>Selecione o tipo de solução</option>
                                     <option>Microsoft 365</option>
