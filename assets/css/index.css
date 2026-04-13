@@ -143,6 +143,7 @@ body {
 
 .floating {
   animation: floating 6s ease-in-out infinite;
+  will-change: transform;
 }
 
 @keyframes floating {
@@ -152,6 +153,7 @@ body {
 
 .pulse-slow {
   animation: pulse-slow 3s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 @keyframes pulse-slow {
