@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /ebooks/
+
+Sitemap: https://codlinx.com.br/sitemap.xml
