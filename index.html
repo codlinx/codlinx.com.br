@@ -30,7 +30,7 @@
     <meta property="twitter:description" content="Desenvolvemos sistemas sob medida para clínicas, comércio e empresas em BH. Microsoft 365, automações e manutenção de servidores.">
     <meta property="twitter:image" content="https://codlinx.com.br/assets/img/start.jpg">
 
-    <meta name="keywords" content="software personalizado BH, sistema para clínica médica, sistema comercial ERP, Microsoft 365 parceiro, parceiro Bitdefender, parceiro Dell, automação empresarial, desenvolvimento de software Belo Horizonte, manutenção de servidores">
+    <meta name="keywords" content="software personalizado BH, sistema para clínica médica, sistema comercial ERP, Microsoft 365 parceiro, automação empresarial, desenvolvimento de software Belo Horizonte, manutenção de servidores">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="Portuguese">
@@ -45,7 +45,7 @@
           "name": "Codlinx",
           "url": "https://codlinx.com.br",
           "logo": "https://codlinx.com.br/assets/img/logo3.png",
-          "description": "Empresa de desenvolvimento de software personalizado para clínicas, comércio e empresas. Parceiro Oficial Microsoft, Bitdefender e Dell.",
+          "description": "Empresa de desenvolvimento de software personalizado para clínicas, comércio e empresas. Parceiro Oficial Microsoft.",
           "foundingDate": "2014",
           "address": {"@type":"PostalAddress","addressLocality":"Belo Horizonte","addressRegion":"MG","addressCountry":"BR"},
           "contactPoint": {"@type":"ContactPoint","telephone":"+55-31-3191-0305","contactType":"sales","areaServed":"BR","availableLanguage":"Portuguese"}
@@ -127,28 +127,24 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header -->
-    <header class="glass-header fixed w-full top-0 z-50">
+    <header class="site-header fixed w-full top-0 z-50">
         <nav class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3">
-
-                    <div>
-                        <a href="/">
-                            <img src="assets/img/logo3.png" alt="Codlinx - Software Corporativo para Empresas" width="160" height="40">
-                        </a>
-                    </div>
-                </div>
+                <a href="/" class="wordmark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px" aria-hidden="true"><path d="M4 4v5M4 4h5M20 4v5M20 4h-5M4 20v-5M4 20h5M20 20v-5M20 20h-5"/></svg>
+                    <span>codlinx<small>Software sob medida — BH</small></span>
+                </a>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#inicio" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Início</a>
-                    <a href="#solucoes" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Soluções</a>
-                    <a href="#servicos" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Serviços</a>
-                    <a href="#sobre" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Sobre</a>
-                    <a href="/privacidade" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Privacidade</a>
-                    <a href="#contato" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-sm">Falar com Especialista</a>
+                    <a href="#inicio" class="nav-link font-medium">Início</a>
+                    <a href="#solucoes" class="nav-link font-medium">Soluções</a>
+                    <a href="#servicos" class="nav-link font-medium">Serviços</a>
+                    <a href="#sobre" class="nav-link font-medium">Sobre</a>
+                    <a href="/privacidade" class="nav-link font-medium">Privacidade</a>
+                    <a href="#contato" class="btn-primary px-5 py-2 font-semibold text-sm">Falar com Especialista</a>
                 </div>
 
-                <button class="md:hidden text-gray-700" onclick="toggleMenu()">
+                <button class="md:hidden text-gray-700" onclick="toggleMenu()" aria-label="Abrir menu" aria-expanded="false" id="navToggle">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16"></path>
@@ -157,95 +153,89 @@
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-100 pt-4">
-                <a href="#inicio" class="block py-2 text-gray-700 hover:text-blue-700 font-medium">Início</a>
-                <a href="#solucoes" class="block py-2 text-gray-700 hover:text-blue-700 font-medium">Soluções</a>
-                <a href="#servicos" class="block py-2 text-gray-700 hover:text-blue-700 font-medium">Serviços</a>
-                <a href="#sobre" class="block py-2 text-gray-700 hover:text-blue-700 font-medium">Sobre</a>
-                <a href="/privacidade" class="block py-2 text-gray-700 hover:text-blue-700 font-medium">Privacidade</a>
-                <a href="#contato" class="block mt-2 bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors">Falar com Especialista</a>
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 pt-4" style="border-top:1px solid var(--border)">
+                <a href="#inicio" class="block py-2 nav-link font-medium">Início</a>
+                <a href="#solucoes" class="block py-2 nav-link font-medium">Soluções</a>
+                <a href="#servicos" class="block py-2 nav-link font-medium">Serviços</a>
+                <a href="#sobre" class="block py-2 nav-link font-medium">Sobre</a>
+                <a href="/privacidade" class="block py-2 nav-link font-medium">Privacidade</a>
+                <a href="#contato" class="btn-primary block mt-2 py-3 px-4 font-semibold text-center">Falar com Especialista</a>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="gradient-bg text-white pt-24 pb-20 relative overflow-hidden">
+    <section id="inicio" class="gradient-bg pt-24 pb-20 relative overflow-hidden">
+        <div class="grid-field absolute inset-0" style="opacity:.45;-webkit-mask-image:linear-gradient(to bottom, black, transparent 92%);mask-image:linear-gradient(to bottom, black, transparent 92%);" aria-hidden="true"></div>
         <div class="container mx-auto px-6 relative z-10 w-full">
-            <div class="flex flex-col lg:flex-row items-center">
-                <div class="lg:w-1/2 mb-12 lg:mb-0">
-                    <div class="mb-4 fade-in">
-                        <span class="text-blue-200 text-lg text-wrap">Soluções inteligentes para um mundo conectado.</span>
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="eyebrow on-band mb-4 fade-in">
+                        <svg class="corner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4v5M4 4h5M20 4v5M20 4h-5M4 20v-5M4 20h5M20 20v-5M20 20h-5"/></svg>
+                        Belo Horizonte, MG — desde 2014
                     </div>
                     <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight fade-in">
                         Soluções
                         <span class="gradient-text">Corporativas</span>
                         <br>em Software
                     </h1>
-                    <p class="text-xl mb-8 text-blue-100 fade-in">
-                        Desenvolvemos softwares <strong>100% personalizados</strong> para cada cliente. Sistemas completos para clínicas médicas, comércios e empresas de todos os segmentos, construídos sob medida para suas necessidades. Somos Parceiros Oficiais Microsoft, Bitdefender e Dell, e atendemos empresas em todo o Brasil com suporte especializado desde 2014.
+                    <p class="text-xl mb-8 text-band-soft fade-in">
+                        Desenvolvemos softwares <strong class="text-band">100% personalizados</strong> para cada cliente. Sistemas completos para clínicas médicas, comércios e empresas de todos os segmentos, construídos sob medida para suas necessidades. Somos Parceiros Oficiais Microsoft e atendemos empresas em todo o Brasil com suporte especializado desde 2014.
                     </p>
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 fade-in">
-                        <button onclick="scrollToSection('contato')"
-                            class="bg-white text-slate-800 px-8 py-4 rounded-lg font-semibold hover:bg-slate-100 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <div class="flex flex-col sm:flex-row gap-4 fade-in">
+                        <a href="#contato" class="btn-primary px-8 py-4 font-semibold text-center">
                             Falar com um Especialista
-                        </button>
-                        <button onclick="scrollToSection('solucoes')"
-                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-800 transition-all duration-300">
+                        </a>
+                        <a href="#solucoes" class="btn-outline text-band px-8 py-4 font-semibold text-center">
                             Nossas Soluções
-                        </button>
+                        </a>
                     </div>
                 </div>
 
-                <div class="lg:w-1/2 lg:pl-12">
-                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 fade-in floating">
-                        <!-- Partner Badges -->
-                        <div class="text-center mb-6">
-                            <div class="text-xs font-medium text-blue-200 mb-3 uppercase tracking-wide">Parceiros Oficiais</div>
-                            <div class="flex items-center justify-center gap-3 flex-wrap">
-                                <div class="bg-white rounded-lg h-12 w-20 flex items-center justify-center p-2">
-                                    <img src="./assets/img/icons/microsoft.png" alt="Microsoft" class="h-6 w-auto object-contain">
-                                </div>
-                                <div class="bg-white rounded-lg h-12 w-20 flex items-center justify-center p-2">
-                                    <img src="./assets/img/icons/bitdefender.png" alt="Bitdefender" class="h-8 w-auto object-contain">
-                                </div>
-                                <div class="bg-white rounded-lg h-12 w-20 flex items-center justify-center p-2">
-                                    <img src="./assets/img/icons/dell.png" alt="Dell" class="h-6 w-auto object-contain">
-                                </div>
-                            </div>
-                        </div>
+                <div class="fade-in floating">
+                    <svg viewBox="0 0 480 400" role="img" aria-label="Diagrama técnico: um bloco de software sendo dimensionado sob medida para o negócio do cliente" class="w-full h-auto">
+                        <rect x="1" y="1" width="478" height="398" fill="none" stroke="var(--band-border)" stroke-width="1"/>
+                        <g stroke="var(--band-accent)" stroke-width="1.6" fill="none">
+                            <path d="M8 8h14M8 8v14"/>
+                            <path d="M472 8h-14M472 8v14"/>
+                            <path d="M8 392h14M8 392v-14"/>
+                            <path d="M472 392h-14M472 392v-14"/>
+                        </g>
 
-                        <h3 class="text-xl font-semibold mb-8 text-center">Nossos Diferenciais</h3>
-                        <div class="grid grid-cols-2 gap-6">
-                            <div
-                                class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift border border-white/10">
-                                <div class="text-blue-300 mb-4 flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-large" aria-hidden="true"><path d="M12 7v4" /><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M14 9h-4" /><path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" /><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" /></svg>
-                                </div>
-                                <div class="text-sm font-medium">Sistemas para Clínicas</div>
-                            </div>
-                            <div
-                                class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift border border-white/10">
-                                <div class="text-blue-300 mb-4 flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-large" aria-hidden="true"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" /><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" /><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" /></svg>
-                                </div>
-                                <div class="text-sm font-medium">Soluções Comerciais</div>
-                            </div>
-                            <div
-                                class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift border border-white/10">
-                                <div class="mb-4 flex justify-center">
-                                    <img src="./assets/img/icons/microsoft.png" alt="Microsoft 365" class="w-12 h-12">
-                                </div>
-                                <div class="text-sm font-medium">Microsoft 365</div>
-                            </div>
-                            <div
-                                class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift border border-white/10">
-                                <div class="text-blue-300 mb-4 flex justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-large" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg>
-                                </div>
-                                <div class="text-sm font-medium">Automações Inteligentes</div>
-                            </div>
-                        </div>
-                    </div>
+                        <rect x="118" y="96" width="244" height="176" rx="2" fill="rgba(242,245,250,.04)" stroke="var(--band-fg-soft)" stroke-width="2"/>
+                        <text x="240" y="176" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" fill="var(--band-fg)">SEU NEGÓCIO</text>
+                        <text x="240" y="196" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="var(--band-fg-faint)">COD.LX — REV.2026</text>
+
+                        <g stroke="var(--band-border)" stroke-width="1" stroke-dasharray="3 3">
+                            <path d="M118 60V96"/>
+                            <path d="M362 60V96"/>
+                            <path d="M398 96H362"/>
+                            <path d="M398 272H362"/>
+                        </g>
+                        <g stroke="var(--band-accent)" stroke-width="1.4">
+                            <path d="M118 68H362" marker-start="url(#arrS)" marker-end="url(#arrE)"/>
+                            <path d="M398 96V272" marker-start="url(#arrS2)" marker-end="url(#arrE2)"/>
+                        </g>
+                        <defs>
+                            <marker id="arrS" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M7 1L1 4L7 7" fill="none" stroke="var(--band-accent)" stroke-width="1.4"/></marker>
+                            <marker id="arrE" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M1 1L7 4L1 7" fill="none" stroke="var(--band-accent)" stroke-width="1.4"/></marker>
+                            <marker id="arrS2" markerWidth="8" markerHeight="8" refX="4" refY="1" orient="auto"><path d="M1 7L4 1L7 7" fill="none" stroke="var(--band-accent)" stroke-width="1.4"/></marker>
+                            <marker id="arrE2" markerWidth="8" markerHeight="8" refX="4" refY="7" orient="auto"><path d="M1 1L4 7L1 1" fill="none" stroke="var(--band-accent)" stroke-width="1.4"/></marker>
+                        </defs>
+                        <text x="240" y="52" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" fill="var(--band-accent)" letter-spacing="0.5">LARGURA: 100% SOB MEDIDA</text>
+                        <text x="412" y="188" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" fill="var(--band-accent)" transform="rotate(90 412 188)" letter-spacing="0.5">ALTURA: 0% GENÉRICO</text>
+
+                        <g transform="translate(118 296)">
+                            <rect width="150" height="30" fill="none" stroke="var(--band-border)"/>
+                            <text x="75" y="19" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="var(--band-fg-soft)" letter-spacing="0.5">PARCEIRO OFICIAL MICROSOFT</text>
+                        </g>
+                        <g transform="translate(276 296)">
+                            <rect width="86" height="30" fill="none" stroke="var(--band-border)"/>
+                            <text x="43" y="19" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="var(--band-fg-soft)" letter-spacing="0.5">BR · 100%</text>
+                        </g>
+                        <text x="20" y="382" font-family="JetBrains Mono, monospace" font-size="9" fill="var(--band-fg-faint)">0,0</text>
+                        <circle cx="12" cy="376" r="2" fill="var(--band-accent)"/>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -254,16 +244,16 @@
     <!-- Custom Software Section -->
     <section id="sob-medida" class="section-spacing bg-white">
         <div class="container mx-auto px-6">
-            <div class="modern-card bg-gradient-to-br from-slate-50 to-blue-50 border-blue-100 fade-in">
+            <div class="ruler mb-6" aria-hidden="true"></div>
+            <div class="modern-card fade-in">
                 <div class="flex flex-col lg:flex-row items-center gap-12">
                     <div class="lg:w-3/5">
-                        <div
-                            class="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold mb-6">
+                        <div class="eyebrow mb-6">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="m16 18 6-6-6-6" /><path d="m8 6-6 6 6 6" /></svg>
-                            <span>Desenvolvimento Sob Demanda</span>
+                            <span>Folha 01 — Desenvolvimento sob demanda</span>
                         </div>
                         <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-                            Seu Negócio é Único, Seu <span class="gradient-text">Software</span> Também Deve Ser
+                            Seu Negócio é Único, Seu <span class="accent">Software</span> Também Deve Ser
                         </h2>
                         <p class="text-xl text-gray-600 mb-8 leading-relaxed">
                             Não entregamos pacotes prontos que você precisa "se adaptar". Nós estudamos seus processos e
@@ -273,8 +263,7 @@
 
                         <div class="grid md:grid-cols-2 gap-6 mb-8">
                             <div class="flex items-start space-x-4">
-                                <div
-                                    class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
+                                <div class="w-10 h-10 bg-white rounded flex items-center justify-center flex-shrink-0" style="border:1px solid var(--border)">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600 w-5 h-5" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg>
                                 </div>
                                 <div>
@@ -283,8 +272,7 @@
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
-                                <div
-                                    class="w-10 h-10 bg-white rounded-xl shadow-sm flex items-center justify-center flex-shrink-0">
+                                <div class="w-10 h-10 bg-white rounded flex items-center justify-center flex-shrink-0" style="border:1px solid var(--border)">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600 w-5 h-5" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" /><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" /><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" /></svg>
                                 </div>
                                 <div>
@@ -294,41 +282,30 @@
                             </div>
                         </div>
 
-                        <button onclick="scrollToSection('contato')"
-                            class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center">
+                        <a href="#contato" class="btn-primary inline-flex items-center px-8 py-4 font-bold">
                             Conversar Sobre Meu Projeto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-3" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                        </button>
+                        </a>
                     </div>
 
                     <div class="lg:w-2/5 flex justify-center">
-                        <div class="relative">
-                            <div class="absolute -inset-4 bg-blue-100 rounded-full blur-3xl opacity-50 floating"></div>
-                            <div class="relative bg-white p-8 rounded-3xl shadow-2xl border border-blue-50">
-                                <div class="space-y-4">
-                                    <div class="flex items-center space-x-4 p-4 bg-slate-50 rounded-2xl">
-                                        <div class="w-2 h-12 bg-blue-600 rounded-full"></div>
-                                        <div>
-                                            <div class="text-xs font-bold text-blue-600 uppercase tracking-wider">Passo
-                                                01</div>
-                                            <div class="text-gray-800 font-bold">Análise de Processos</div>
-                                        </div>
+                        <div class="relative bg-white p-8 rounded border" style="border-color:var(--border)">
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-4 p-4 rounded" style="background:var(--paper);border-left:3px solid var(--copper)">
+                                    <div>
+                                        <div class="text-xs font-bold uppercase tracking-wider mono" style="color:var(--copper)">Passo 01</div>
+                                        <div class="text-gray-800 font-bold">Análise de Processos</div>
                                     </div>
-                                    <div class="flex items-center space-x-4 p-4 bg-slate-50 rounded-2xl">
-                                        <div class="w-2 h-12 bg-blue-400 rounded-full"></div>
-                                        <div>
-                                            <div class="text-xs font-bold text-blue-400 uppercase tracking-wider">Passo
-                                                02</div>
-                                            <div class="text-gray-800 font-bold">Design Customizado</div>
-                                        </div>
+                                </div>
+                                <div class="flex items-center space-x-4 p-4 rounded" style="background:var(--paper);border-left:3px solid var(--copper)">
+                                    <div>
+                                        <div class="text-xs font-bold uppercase tracking-wider mono" style="color:var(--copper)">Passo 02</div>
+                                        <div class="text-gray-800 font-bold">Design Customizado</div>
                                     </div>
-                                    <div
-                                        class="flex items-center space-x-4 p-4 bg-slate-50 rounded-2xl border-2 border-blue-600">
-                                        <div class="w-2 h-12 bg-blue-600 rounded-full"></div>
-                                        <div>
-                                            <div class="text-xs font-bold text-blue-600 uppercase tracking-wider">Passo
-                                                03</div>
-                                            <div class="text-gray-800 font-bold">Desenvolvimento Ágil</div>
-                                        </div>
+                                </div>
+                                <div class="flex items-center space-x-4 p-4 rounded" style="background:var(--paper);border-left:3px solid var(--check)">
+                                    <div>
+                                        <div class="text-xs font-bold uppercase tracking-wider mono" style="color:var(--check)">Passo 03</div>
+                                        <div class="text-gray-800 font-bold">Desenvolvimento Ágil</div>
                                     </div>
                                 </div>
                             </div>
@@ -342,7 +319,9 @@
     <!-- Solutions Section -->
     <section id="solucoes" class="py-20 bg-white">
         <div class="container mx-auto px-6">
+            <div class="ruler mb-6" aria-hidden="true"></div>
             <div class="text-center mb-16">
+                <div class="eyebrow justify-center mb-4">Folha 02 — Soluções por segmento</div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Software Sob Medida para Clínicas e Comércio</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
                     Sistemas desenvolvidos especificamente para atender as necessidades do seu segmento, sem adaptações ou compromissos
@@ -353,13 +332,12 @@
                 <!-- Clinic Solutions -->
                 <div class="modern-card fade-in">
                     <div class="flex items-center mb-8">
-                        <div
-                            class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mr-6">
+                        <div class="service-icon mr-6 mb-0">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-large" aria-hidden="true"><path d="M12 7v4" /><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M14 9h-4" /><path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" /><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" /></svg>
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold text-gray-800">Sistemas para Clínicas</h3>
-                            <p class="text-blue-600 font-medium">Simples e prático</p>
+                            <p class="font-medium" style="color:var(--copper)">Simples e prático</p>
                         </div>
                     </div>
 
@@ -372,63 +350,57 @@
 
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-center text-gray-700">
-                            <div
-                                class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3" style="background:rgba(47,125,94,.12);color:var(--check)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
                             <span>Agenda online para pacientes</span>
                         </li>
                         <li class="flex items-center text-gray-700">
-                            <div
-                                class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3" style="background:rgba(47,125,94,.12);color:var(--check)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
                             <span>Cadastro simples de pacientes</span>
                         </li>
                         <li class="flex items-center text-gray-700">
-                            <div
-                                class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3" style="background:rgba(47,125,94,.12);color:var(--check)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
                             <span>Controle de consultas e retornos</span>
                         </li>
                         <li class="flex items-center text-gray-700">
-                            <div
-                                class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3" style="background:rgba(47,125,94,.12);color:var(--check)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
                             <span>Relatórios gerenciais</span>
                         </li>
                     </ul>
 
-                    <div class="bg-blue-700 rounded-2xl p-5 mb-6 text-white">
+                    <div class="rounded p-5 mb-6" style="background:var(--btn-bg);color:var(--btn-fg)">
                         <p class="flex items-center gap-1.5 font-bold text-sm mb-1">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 flex-shrink-0" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
                             Material Gratuito
                         </p>
-                        <p class="text-sm text-blue-100 mb-3">Guia Completo: Como Escolher um Sistema para Clínicas</p>
+                        <p class="text-sm mb-3" style="color:var(--band-fg-soft)">Guia Completo: Como Escolher um Sistema para Clínicas</p>
                         <a href="/ebooks/ebookdoctorset.pdf" target="_blank" rel="noopener"
-                            class="bg-white text-blue-700 px-4 py-2 rounded-lg text-sm font-bold hover:bg-blue-50 transition-colors inline-block">
+                            class="bg-white px-4 py-2 rounded text-sm font-bold hover:opacity-90 transition-opacity inline-block" style="color:var(--btn-bg)">
                             Baixar Ebook Grátis
                         </a>
                     </div>
 
-                    <button onclick="scrollToSection('contato')"
-                        class="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-200">
+                    <a href="#contato" class="btn-primary w-full text-center block py-4 font-semibold">
                         Ver Demonstração Gratuita
-                    </button>
+                    </a>
                 </div>
 
                 <!-- Commerce Solutions -->
                 <div class="modern-card fade-in">
                     <div class="flex items-center mb-8">
-                        <div
-                            class="w-16 h-16 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mr-6">
+                        <div class="service-icon mr-6 mb-0">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-large" aria-hidden="true"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" /><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" /><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" /></svg>
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold text-gray-800">Sistemas Comerciais</h3>
-                            <p class="text-blue-600 font-medium">Fácil de usar</p>
+                            <p class="font-medium" style="color:var(--copper)">Fácil de usar</p>
                         </div>
                     </div>
 
@@ -441,46 +413,41 @@
 
                     <ul class="space-y-4 mb-8">
                         <li class="flex items-center text-gray-700">
-                            <div
-                                class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3" style="background:rgba(27,58,107,.1);color:var(--blueprint)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
                             <span>Cadastro de produtos e preços</span>
                         </li>
                         <li class="flex items-center text-gray-700">
-                            <div
-                                class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3" style="background:rgba(27,58,107,.1);color:var(--blueprint)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
                             <span>Controle de estoque</span>
                         </li>
                         <li class="flex items-center text-gray-700">
-                            <div
-                                class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3" style="background:rgba(27,58,107,.1);color:var(--blueprint)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
                             <span>Emissão de cupons e notas</span>
                         </li>
                         <li class="flex items-center text-gray-700">
-                            <div
-                                class="w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <div class="w-6 h-6 rounded-full flex items-center justify-center mr-3" style="background:rgba(27,58,107,.1);color:var(--blueprint)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg>
                             </div>
                             <span>Relatório de vendas diário</span>
                         </li>
                     </ul>
 
-                    <div class="bg-blue-50 rounded-2xl p-6 mb-8 border border-blue-100">
-                        <p class="text-blue-800 text-sm font-medium flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-3" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
+                    <div class="rounded-lg p-4 mb-8" style="background:var(--paper);border:1px dashed var(--border)">
+                        <p class="text-sm font-medium flex items-center mono" style="color:var(--copper)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-3 flex-shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
                             Precisa integrar com sua loja online ou marketplace?
                         </p>
                     </div>
 
-                    <button onclick="scrollToSection('contato')"
-                        class="w-full bg-blue-600 text-white py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg shadow-blue-200">
+                    <a href="#contato" class="btn-primary w-full text-center block py-4 font-semibold">
                         Ver Demonstração
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -489,7 +456,9 @@
     <!-- Services Section -->
     <section id="servicos" class="section-spacing bg-gray-50">
         <div class="container mx-auto px-6">
+            <div class="ruler mb-6" aria-hidden="true"></div>
             <div class="text-center mb-16">
+                <div class="eyebrow justify-center mb-4">Folha 03 — Serviços de TI</div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Serviços de TI para Empresas em Belo Horizonte</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
                     Suporte completo para manter seus sistemas funcionando com máxima eficiência e segurança
@@ -505,16 +474,15 @@
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed">
                         Gerenciamos toda a infraestrutura dos seus servidores — atualizações, segurança, backup automático e performance. Você foca no seu negócio enquanto nós garantimos que sua tecnologia esteja sempre disponível e protegida.
                     </p>
-                    <div class="bg-blue-50 rounded-xl p-4 mb-6">
-                        <p class="text-xs text-blue-700 font-medium">
+                    <div class="rounded-lg p-4 mb-6" style="background:var(--paper);border:1px solid var(--border)">
+                        <p class="text-xs font-medium mono" style="color:var(--blueprint)">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 inline-block mr-2" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg>
                             Quer uma análise de segurança?
                         </p>
                     </div>
-                    <button onclick="scrollToSection('contato')"
-                        class="text-blue-600 text-sm font-bold hover:text-blue-800 transition-colors flex items-center">
+                    <a href="#contato" class="text-sm font-bold transition-colors flex items-center" style="color:var(--blueprint)">
                         Solicitar Análise <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                    </button>
+                    </a>
                 </div>
 
                 <div class="modern-card fade-in">
@@ -525,16 +493,15 @@
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed">
                         Monitoramos seus servidores e aplicações 24 horas por dia. Dashboards em tempo real mostram o estado de cada serviço e alertas automáticos via WhatsApp avisam sua equipe imediatamente quando algo sai do padrão — antes que afete seus clientes.
                     </p>
-                    <div class="bg-blue-50 rounded-xl p-4 mb-6">
-                        <p class="text-xs text-blue-700 font-medium">
+                    <div class="rounded-lg p-4 mb-6" style="background:var(--paper);border:1px solid var(--border)">
+                        <p class="text-xs font-medium mono" style="color:var(--blueprint)">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 inline-block mr-2" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0" /><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" /></svg>
                             Alertas via WhatsApp
                         </p>
                     </div>
-                    <button onclick="scrollToSection('contato')"
-                        class="text-blue-600 text-sm font-bold hover:text-blue-800 transition-colors flex items-center">
+                    <a href="#contato" class="text-sm font-bold transition-colors flex items-center" style="color:var(--blueprint)">
                         Ver Exemplos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                    </button>
+                    </a>
                 </div>
 
                 <div class="modern-card fade-in">
@@ -545,16 +512,15 @@
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed">
                         Conectamos seus sistemas para trabalharem juntos automaticamente. Elimine retrabalho, sincronize estoques, automatize cobranças e integre canais de venda. Menos trabalho manual, mais tempo para o que realmente importa no seu negócio.
                     </p>
-                    <div class="bg-blue-50 rounded-xl p-4 mb-6">
-                        <p class="text-xs text-blue-700 font-medium">
+                    <div class="rounded-lg p-4 mb-6" style="background:var(--paper);border:1px solid var(--border)">
+                        <p class="text-xs font-medium mono" style="color:var(--blueprint)">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 inline-block mr-2" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8" /><path d="M21 3v5h-5" /><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16" /><path d="M8 16H3v5" /></svg>
                             Sincronização de Estoque
                         </p>
                     </div>
-                    <button onclick="scrollToSection('contato')"
-                        class="text-blue-600 text-sm font-bold hover:text-blue-800 transition-colors flex items-center">
+                    <a href="#contato" class="text-sm font-bold transition-colors flex items-center" style="color:var(--blueprint)">
                         Contar Necessidade <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                    </button>
+                    </a>
                 </div>
 
                 <div class="modern-card fade-in">
@@ -565,201 +531,179 @@
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed">
                         Chatbots para atendimento automático, análise de dados de vendas, agendamentos inteligentes e dashboards de decisão. Tecnologia de IA aplicada ao dia a dia da sua empresa, de forma prática e acessível.
                     </p>
-                    <div class="bg-blue-50 rounded-xl p-4 mb-6">
-                        <p class="text-xs text-blue-700 font-medium">
+                    <div class="rounded-lg p-4 mb-6" style="background:var(--paper);border:1px solid var(--border)">
+                        <p class="text-xs font-medium mono" style="color:var(--blueprint)">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 inline-block mr-2" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z" /></svg>
                             Agendamentos Automáticos
                         </p>
                     </div>
-                    <button onclick="scrollToSection('contato')"
-                        class="text-blue-600 text-sm font-bold hover:text-blue-800 transition-colors flex items-center">
+                    <a href="#contato" class="text-sm font-bold transition-colors flex items-center" style="color:var(--blueprint)">
                         Explorar Opções <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-2" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Microsoft 365 Section -->
-    <section class="py-20 bg-gradient-to-br from-blue-600 to-indigo-700 text-white">
+    <section class="py-20 tech-mesh" style="background:var(--band-bg);color:var(--band-fg-soft)">
+        <div class="signal-line" aria-hidden="true"><span class="signal-dot"></span></div>
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
                 <div class="flex justify-center items-center mb-6">
-
                     <div class="text-center bg-white rounded-lg p-4">
                         <img src="./assets/img/icons/microsoft-partner.png" alt="Microsoft 365 Partner"
                             class="w-45 h-20 mx-auto mb-2">
                     </div>
                 </div>
-                <p class="text-xl text-blue-100 max-w-3xl mx-auto fade-in">
+                <p class="text-xl max-w-3xl mx-auto fade-in text-band-soft">
                     Transforme sua empresa com as ferramentas de produtividade mais avançadas do mundo
                 </p>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-12 mb-16">
                 <div class="fade-in">
-                    <h3 class="text-2xl font-bold mb-8">Por que escolher Microsoft 365?</h3>
+                    <h3 class="text-2xl font-bold mb-8 text-band">Por que escolher Microsoft 365?</h3>
                     <div class="space-y-6">
-                        <div class="flex items-start space-x-6">
-                            <div
-                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-start space-x-6 pt-6" style="border-top:1px solid var(--band-border)">
+                            <div class="w-12 h-12 rounded flex items-center justify-center flex-shrink-0" style="border:1px solid var(--band-border)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /><rect x="2" y="4" width="20" height="16" rx="2" /></svg>
                             </div>
                             <div>
-                                <h4 class="font-semibold mb-2">Email Profissional</h4>
-                                <p class="text-blue-100 text-sm leading-relaxed">Outlook com seu domínio personalizado,
-                                    50GB de
-                                    armazenamento e proteção avançada contra spam.</p>
+                                <h4 class="font-semibold mb-2 text-band">Email Profissional</h4>
+                                <p class="text-sm leading-relaxed text-band-soft">Outlook com seu domínio personalizado, 50GB de armazenamento e proteção avançada contra spam.</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-6">
-                            <div
-                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-start space-x-6 pt-6" style="border-top:1px solid var(--band-border)">
+                            <div class="w-12 h-12 rounded flex items-center justify-center flex-shrink-0" style="border:1px solid var(--band-border)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" /></svg>
                             </div>
                             <div>
-                                <h4 class="font-semibold mb-2">Armazenamento na Nuvem</h4>
-                                <p class="text-blue-100 text-sm leading-relaxed">1TB no OneDrive por usuário. Acesse
-                                    seus arquivos de
-                                    qualquer lugar, com sincronização automática.</p>
+                                <h4 class="font-semibold mb-2 text-band">Armazenamento na Nuvem</h4>
+                                <p class="text-sm leading-relaxed text-band-soft">1TB no OneDrive por usuário. Acesse seus arquivos de qualquer lugar, com sincronização automática.</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-6">
-                            <div
-                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-start space-x-6 pt-6" style="border-top:1px solid var(--band-border)">
+                            <div class="w-12 h-12 rounded flex items-center justify-center flex-shrink-0" style="border:1px solid var(--band-border)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><path d="M16 3.128a4 4 0 0 1 0 7.744" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><circle cx="9" cy="7" r="4" /></svg>
                             </div>
                             <div>
-                                <h4 class="font-semibold mb-2">Colaboração em Tempo Real</h4>
-                                <p class="text-blue-100 text-sm leading-relaxed">Teams para videoconferências, chat e
-                                    colaboração.
-                                    Trabalhe junto mesmo à distância.</p>
+                                <h4 class="font-semibold mb-2 text-band">Colaboração em Tempo Real</h4>
+                                <p class="text-sm leading-relaxed text-band-soft">Teams para videoconferências, chat e colaboração. Trabalhe junto mesmo à distância.</p>
                             </div>
                         </div>
 
-                        <div class="flex items-start space-x-6">
-                            <div
-                                class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div class="flex items-start space-x-6 pt-6" style="border-top:1px solid var(--band-border)">
+                            <div class="w-12 h-12 rounded flex items-center justify-center flex-shrink-0" style="border:1px solid var(--band-border)">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg>
                             </div>
                             <div>
-                                <h4 class="font-semibold mb-2">Segurança Empresarial</h4>
-                                <p class="text-blue-100 text-sm leading-relaxed">Proteção avançada contra ameaças,
-                                    backup automático e
-                                    conformidade com LGPD.</p>
+                                <h4 class="font-semibold mb-2 text-band">Segurança Empresarial</h4>
+                                <p class="text-sm leading-relaxed text-band-soft">Proteção avançada contra ameaças, backup automático e conformidade com LGPD.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="fade-in">
-                    <div class="modern-card transition-none text-gray-800">
+                    <div class="modern-card">
                         <h3 class="text-2xl font-bold mb-8 text-center">Aplicativos Inclusos</h3>
                         <div class="grid grid-cols-3 gap-6 mb-8">
                             <div class="text-center group">
-                                <div
-                                    class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
+                                <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-3" style="border:1px solid var(--border);background:var(--paper)">
                                     <img src="./assets/img/icons/word.svg" alt="Word" class="w-8 h-8">
                                 </div>
                                 <div class="text-xs font-semibold">Word</div>
                             </div>
                             <div class="text-center group">
-                                <div
-                                    class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
+                                <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-3" style="border:1px solid var(--border);background:var(--paper)">
                                     <img src="./assets/img/icons/excel.png" alt="Excel" class="w-8 h-8">
                                 </div>
                                 <div class="text-xs font-semibold">Excel</div>
                             </div>
                             <div class="text-center group">
-                                <div
-                                    class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
+                                <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-3" style="border:1px solid var(--border);background:var(--paper)">
                                     <img src="./assets/img/icons/powerpoint.svg" alt="PowerPoint" class="w-8 h-8">
                                 </div>
                                 <div class="text-xs font-semibold">PPT</div>
                             </div>
                             <div class="text-center group">
-                                <div
-                                    class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
+                                <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-3" style="border:1px solid var(--border);background:var(--paper)">
                                     <img src="./assets/img/icons/outlook.png" alt="Outlook" class="w-8 h-8">
                                 </div>
                                 <div class="text-xs font-semibold">Outlook</div>
                             </div>
                             <div class="text-center group">
-                                <div
-                                    class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
+                                <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-3" style="border:1px solid var(--border);background:var(--paper)">
                                     <img src="./assets/img/icons/teams.png" alt="Teams" class="w-8 h-8">
                                 </div>
                                 <div class="text-xs font-semibold">Teams</div>
                             </div>
                             <div class="text-center group">
-                                <div
-                                    class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-100 transition-colors">
+                                <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-3" style="border:1px solid var(--border);background:var(--paper)">
                                     <img src="./assets/img/icons/onedrive.svg" alt="OneDrive" class="w-8 h-8">
                                 </div>
                                 <div class="text-xs font-semibold">OneDrive</div>
                             </div>
                         </div>
 
-                        <div class="bg-blue-600 rounded-2xl p-6 mb-8 text-white text-center shadow-lg shadow-blue-200">
+                        <div class="rounded-lg p-6 mb-8 text-center" style="background:var(--btn-bg);color:var(--btn-fg)">
                             <div class="text-3xl font-bold mb-1">R$ 42,90 <span class="text-sm font-normal">/mês</span>
                             </div>
                             <div class="text-sm opacity-90">Plano Business Basic</div>
                         </div>
 
-                        <button onclick="scrollToSection('contato')"
-                            class="w-full border-2 border-blue-600 text-blue-600 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all">
+                        <a href="#contato" class="btn-outline w-full block text-center py-4 font-bold" style="color:var(--blueprint)">
                             Solicitar Orçamento
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8 fade-in">
                 <div class="stats-counter text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-8 h-8" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg>
+                    <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-6" style="background:rgba(226,163,116,.14)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-band" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg>
                     </div>
                     <h4 class="text-xl font-bold mb-4">Migração Completa</h4>
-                    <p class="text-blue-100 text-sm leading-relaxed">
+                    <p class="text-sm leading-relaxed text-band-soft">
                         Cuidamos de toda a migração dos seus emails e arquivos. Sem perda de dados.
                     </p>
                 </div>
 
                 <div class="stats-counter text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-8 h-8" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg>
+                    <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-6" style="background:rgba(226,163,116,.14)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-band" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /><path d="M22 10v6" /><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg>
                     </div>
                     <h4 class="text-xl font-bold mb-4">Treinamento Incluído</h4>
-                    <p class="text-blue-100 text-sm leading-relaxed">
+                    <p class="text-sm leading-relaxed text-band-soft">
                         Treinamos sua equipe para usar todas as ferramentas. Suporte contínuo.
                     </p>
                 </div>
 
                 <div class="stats-counter text-center">
-                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-8 h-8" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>
+                    <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-6" style="background:rgba(226,163,116,.14)">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-band" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>
                     </div>
                     <h4 class="text-xl font-bold mb-4">Suporte Especializado</h4>
-                    <p class="text-blue-100 text-sm leading-relaxed">
+                    <p class="text-sm leading-relaxed text-band-soft">
                         Suporte técnico especializado em Microsoft 365. Resolução rápida.
                     </p>
                 </div>
             </div>
 
-            <br>
-
-            <div class=" backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center hover-lift">
-                <sup><small>*</small></sup> Consulte disponibilidade e condições
-            </div>
+            <p class="mono text-xs text-band-faint mt-10 text-center">* Consulte disponibilidade e condições.</p>
         </div>
     </section>
 
     <!-- Clients Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
+            <div class="ruler mb-6" aria-hidden="true"></div>
             <div class="text-center mb-16">
+                <div class="eyebrow justify-center mb-4">Folha 04 — Segmentos atendidos</div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Empresas que Confiam nas Nossas Soluções</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
                     Desenvolvemos soluções personalizadas para diversos segmentos em todo o Brasil
@@ -768,9 +712,8 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="modern-card text-center fade-in">
-                    <div
-                        class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10" aria-hidden="true"><path d="M12 7v4" /><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M14 9h-4" /><path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" /><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" /></svg>
+                    <div class="service-icon mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8" aria-hidden="true"><path d="M12 7v4" /><path d="M14 21v-3a2 2 0 0 0-4 0v3" /><path d="M14 9h-4" /><path d="M18 11h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" /><path d="M18 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Clínicas Médicas</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Consultórios, clínicas especializadas e centros
@@ -778,68 +721,62 @@
                 </div>
 
                 <div class="modern-card text-center fade-in">
-                    <div
-                        class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10" aria-hidden="true"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" /><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" /><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" /></svg>
+                    <div class="service-icon mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8" aria-hidden="true"><path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5" /><path d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244" /><path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Comércio</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Lojas físicas, e-commerce e distribuidoras</p>
                 </div>
 
                 <div class="modern-card text-center fade-in">
-                    <div
-                        class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10" aria-hidden="true"><path d="M12 16h.01" /><path d="M16 16h.01" /><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" /><path d="M8 16h.01" /></svg>
+                    <div class="service-icon mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8" aria-hidden="true"><path d="M12 16h.01" /><path d="M16 16h.01" /><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z" /><path d="M8 16h.01" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Indústrias</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Controle de produção e gestão industrial</p>
                 </div>
 
                 <div class="modern-card text-center fade-in">
-                    <div
-                        class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-10 h-10" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /><rect width="20" height="14" x="2" y="6" rx="2" /></svg>
+                    <div class="service-icon mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /><rect width="20" height="14" x="2" y="6" rx="2" /></svg>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Prestadores</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Empresas de serviços e consultoria</p>
                 </div>
             </div>
 
-            <div class="mt-20 stats-counter fade-in">
+            <div class="mt-20 stats-counter tech-mesh fade-in">
                 <div class="text-center mb-12">
-                    <h3 class="text-3xl font-bold text-white mb-6">Cada Cliente, Uma Solução Única</h3>
-                    <p class="text-blue-100 max-w-2xl mx-auto">
+                    <h3 class="text-3xl font-bold text-band mb-6">Cada Cliente, Uma Solução Única</h3>
+                    <p class="text-band-soft max-w-2xl mx-auto">
                         Não trabalhamos com sistemas prontos. Cada software é desenvolvido especificamente para atender
                         as necessidades e processos únicos do seu negócio.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8 text-white">
+                <div class="grid md:grid-cols-3 gap-8">
                     <div class="text-center group">
-                        <div
-                            class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8" aria-hidden="true"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>
+                        <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-6" style="background:rgba(242,245,250,.08)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-band" aria-hidden="true"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg>
                         </div>
-                        <h4 class="text-lg font-bold mb-3">100% Personalizado</h4>
-                        <p class="text-blue-100 text-sm">Desenvolvido para seu negócio</p>
+                        <h4 class="text-lg font-bold mb-3 text-band">100% Personalizado</h4>
+                        <p class="text-band-soft text-sm">Desenvolvido para seu negócio</p>
                     </div>
 
                     <div class="text-center group">
-                        <div
-                            class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" /><circle cx="12" cy="12" r="3" /></svg>
+                        <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-6" style="background:rgba(242,245,250,.08)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-band" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" /><circle cx="12" cy="12" r="3" /></svg>
                         </div>
-                        <h4 class="text-lg font-bold mb-3">Sob Medida</h4>
-                        <p class="text-blue-100 text-sm">Adaptado aos seus processos</p>
+                        <h4 class="text-lg font-bold mb-3 text-band">Sob Medida</h4>
+                        <p class="text-band-soft text-sm">Adaptado aos seus processos</p>
                     </div>
 
                     <div class="text-center group">
-                        <div
-                            class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-white/20 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8" aria-hidden="true"><path d="M16 7h6v6" /><path d="m22 7-8.5 8.5-5-5L2 17" /></svg>
+                        <div class="w-16 h-16 rounded flex items-center justify-center mx-auto mb-6" style="background:rgba(242,245,250,.08)">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-band" aria-hidden="true"><path d="M16 7h6v6" /><path d="m22 7-8.5 8.5-5-5L2 17" /></svg>
                         </div>
-                        <h4 class="text-lg font-bold mb-3">Escalável</h4>
-                        <p class="text-blue-100 text-sm">Cresce junto com sua empresa</p>
+                        <h4 class="text-lg font-bold mb-3 text-band">Escalável</h4>
+                        <p class="text-band-soft text-sm">Cresce junto com sua empresa</p>
                     </div>
                 </div>
             </div>
@@ -847,9 +784,11 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20 bg-slate-50">
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
+            <div class="ruler mb-6" aria-hidden="true"></div>
             <div class="text-center mb-16">
+                <div class="eyebrow justify-center mb-4">Folha 05 — Depoimentos</div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Resultados Reais para Nossos Clientes</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
                     Depoimentos de quem já transformou sua empresa com nossas soluções
@@ -859,17 +798,17 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="modern-card fade-in">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0">RR</div>
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0 mono" style="background:var(--blueprint);color:#fff">RR</div>
                         <div>
                             <h4 class="font-bold text-gray-800">Dr. Roberto Rodrigues</h4>
                             <p class="text-gray-500 text-xs">Psiquiatra — Clínica Rodrigues, BH</p>
-                            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-0.5 rounded-full mt-1 inline-block">Clínica Médica</span>
+                            <span class="text-xs px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(27,58,107,.1);color:var(--blueprint)">Clínica Médica</span>
                         </div>
                     </div>
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed italic">
                         "O sistema desenvolvido pela Codlinx revolucionou nossa clínica. Agenda online, prontuários organizados e relatórios que realmente ajudam na gestão. Reduzimos o tempo de agendamento em 70% e eliminamos os papéis."
                     </p>
-                    <div class="flex text-yellow-400 space-x-1">
+                    <div class="flex space-x-1" style="color:var(--copper)">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -880,17 +819,17 @@
 
                 <div class="modern-card fade-in">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-indigo-600 text-white rounded-full flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0">SS</div>
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0 mono" style="background:var(--ink);color:#fff">SS</div>
                         <div>
                             <h4 class="font-bold text-gray-800">Sabrina Salles</h4>
                             <p class="text-gray-500 text-xs">Proprietária — Loja Salles, MG</p>
-                            <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full mt-1 inline-block">Comércio</span>
+                            <span class="text-xs px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(47,125,94,.12);color:var(--check)">Comércio</span>
                         </div>
                     </div>
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed italic">
                         "O sistema trouxe organização e praticidade para nossa loja. Hoje controlamos vendas, estoque e financeiro em um só lugar. Nossa taxa de erros de estoque caiu para quase zero e os relatórios diários nos ajudam a tomar decisões melhores."
                     </p>
-                    <div class="flex text-yellow-400 space-x-1">
+                    <div class="flex space-x-1" style="color:var(--copper)">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -901,17 +840,17 @@
 
                 <div class="modern-card fade-in">
                     <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-slate-700 text-white rounded-full flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0">BB</div>
+                        <div class="w-12 h-12 rounded-full flex items-center justify-center mr-4 font-bold text-sm flex-shrink-0 mono" style="background:#3f4b5e;color:#fff">BB</div>
                         <div>
                             <h4 class="font-bold text-gray-800">Bruno Barone</h4>
                             <p class="text-gray-500 text-xs">Supervisor de T.I — Empresa Industrial, MG</p>
-                            <span class="bg-slate-100 text-slate-700 text-xs px-2 py-0.5 rounded-full mt-1 inline-block">Infraestrutura</span>
+                            <span class="text-xs px-2 py-0.5 rounded-full mt-1 inline-block" style="background:var(--paper);color:var(--ink-soft)">Infraestrutura</span>
                         </div>
                     </div>
                     <p class="text-gray-600 text-sm mb-6 leading-relaxed italic">
                         "Com o serviço de manutenção e monitoramento, deixamos de nos preocupar com falhas. Identificamos e resolvemos 3 incidentes críticos antes que afetassem clientes. Os alertas em tempo real mudaram nossa forma de trabalhar."
                     </p>
-                    <div class="flex text-yellow-400 space-x-1">
+                    <div class="flex space-x-1" style="color:var(--copper)">
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -922,15 +861,14 @@
             </div>
 
             <div class="text-center mt-12 fade-in">
-                <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-200 max-w-2xl mx-auto">
+                <div class="modern-card max-w-2xl mx-auto">
                     <h3 class="text-xl font-bold text-gray-800 mb-4">Quer ser nosso próximo case de sucesso?</h3>
                     <p class="text-gray-600 mb-6">
                         Conte-nos sobre seu negócio e vamos desenvolver a solução perfeita para você.
                     </p>
-                    <button onclick="scrollToSection('contato')"
-                        class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                    <a href="#contato" class="btn-primary inline-block px-8 py-3 font-semibold">
                         Solicitar Proposta Gratuita
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -939,6 +877,8 @@
     <!-- About Section -->
     <section id="sobre" class="py-20 bg-white">
         <div class="container mx-auto px-6">
+            <div class="ruler mb-6" aria-hidden="true"></div>
+            <div class="eyebrow mb-4">Folha 06 — Quem construiu isso</div>
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
                     <h2 class="text-4xl font-bold text-gray-800 mb-6 fade-in">10 Anos em Desenvolvimento de Software Corporativo</h2>
@@ -953,69 +893,61 @@
                     </p>
 
                     <div class="grid grid-cols-2 gap-6 fade-in">
-                        <div class="text-center">
-                            <div class="stats-counter text-white rounded-lg p-4 mb-2">
-                                <div class="text-2xl font-bold">50+</div>
-                            </div>
-                            <div class="text-gray-600 text-sm">Sistemas Ativos em Produção</div>
+                        <div>
+                            <div class="text-2xl font-bold mono" style="color:var(--blueprint)">50+</div>
+                            <div class="text-gray-600 text-sm mt-1" style="border-top:1px solid var(--border);padding-top:8px">Sistemas Ativos em Produção</div>
                         </div>
-                        <div class="text-center">
-                            <div class="stats-counter text-white rounded-lg p-4 mb-2">
-                                <div class="text-2xl font-bold">10+</div>
-                            </div>
-                            <div class="text-gray-600 text-sm">Anos no Mercado</div>
+                        <div>
+                            <div class="text-2xl font-bold mono" style="color:var(--blueprint)">10+</div>
+                            <div class="text-gray-600 text-sm mt-1" style="border-top:1px solid var(--border);padding-top:8px">Anos no Mercado</div>
                         </div>
-                        <div class="text-center">
-                            <div class="stats-counter text-white rounded-lg p-4 mb-2">
-                                <div class="text-2xl font-bold">99%</div>
-                            </div>
-                            <div class="text-gray-600 text-sm">Disponibilidade Garantida</div>
+                        <div>
+                            <div class="text-2xl font-bold mono" style="color:var(--blueprint)">99%</div>
+                            <div class="text-gray-600 text-sm mt-1" style="border-top:1px solid var(--border);padding-top:8px">Disponibilidade Garantida</div>
                         </div>
-                        <div class="text-center">
-                            <div class="stats-counter text-white rounded-lg p-4 mb-2">
-                                <div class="text-2xl font-bold">24/7</div>
-                            </div>
-                            <div class="text-gray-600 text-sm">Suporte de Emergência</div>
+                        <div>
+                            <div class="text-2xl font-bold mono" style="color:var(--check)">24/7</div>
+                            <div class="text-gray-600 text-sm mt-1" style="border-top:1px solid var(--border);padding-top:8px">Suporte de Emergência</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:w-1/2">
-                    <div class="bg-gray-50 rounded-2xl p-8 fade-in">
+                    <div class="modern-card fade-in">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6">Tecnologias que Utilizamos</h3>
 
                         <div class="space-y-6">
                             <div>
-                                <h4 class="font-semibold text-gray-800 mb-3">Desenvolvimento</h4>
+                                <h4 class="mono uppercase tracking-wider text-xs mb-3" style="color:var(--ink-faint)">Desenvolvimento</h4>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Node.js</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">PHP</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">JavaScript</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Vue.js</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Python</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Go</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">Vue.js</span>
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Go</span>
                                 </div>
                             </div>
 
                             <div>
-                                <h4 class="font-semibold text-gray-800 mb-3">Banco de Dados</h4>
+                                <h4 class="mono uppercase tracking-wider text-xs mb-3" style="color:var(--ink-faint)">Banco de Dados</h4>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">MySQL</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">PostgreSQL</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">OracleDB</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Redis</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">MongoDB</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                    <span class="tech-badge">OracleDB</span>
+                                    <span class="tech-badge">Redis</span>
+                                    <span class="tech-badge">MongoDB</span>
                                 </div>
                             </div>
 
                             <div>
-                                <h4 class="font-semibold text-gray-800 mb-3">Infraestrutura</h4>
+                                <h4 class="mono uppercase tracking-wider text-xs mb-3" style="color:var(--ink-faint)">Infraestrutura</h4>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Linux</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Docker</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Nginx</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Apache</span>
-                                    <span class="tech-badge px-3 py-1 rounded-full text-sm">Kubernetes</span>
+                                    <span class="tech-badge">Linux</span>
+                                    <span class="tech-badge">Docker</span>
+                                    <span class="tech-badge">Nginx</span>
+                                    <span class="tech-badge">Apache</span>
+                                    <span class="tech-badge">Kubernetes</span>
                                 </div>
                             </div>
                         </div>
@@ -1026,50 +958,54 @@
     </section>
 
     <!-- Como Trabalhamos Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
+            <div class="ruler mb-6" aria-hidden="true"></div>
             <div class="text-center mb-16">
+                <div class="eyebrow justify-center mb-4">Folha 07 — Como trabalhamos</div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Como Trabalhamos</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">Do primeiro contato à entrega — um processo claro, sem surpresas</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center fade-in">
-                    <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg shadow-blue-200">1</div>
+                <div class="fade-in pt-6" style="border-top:2px solid var(--copper)">
+                    <div class="mono font-bold text-sm mb-2" style="color:var(--copper)">01</div>
                     <h3 class="text-lg font-bold text-gray-800 mb-3">Reunião Gratuita</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Entendemos seu negócio, processos e necessidades. Sem custo, sem compromisso.</p>
-                    <div class="text-xs text-blue-600 font-semibold mt-3">~1 hora</div>
+                    <div class="text-xs font-semibold mt-3 mono" style="color:var(--blueprint)">~1 hora</div>
                 </div>
-                <div class="text-center fade-in">
-                    <div class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg shadow-blue-200">2</div>
+                <div class="fade-in pt-6" style="border-top:2px solid var(--copper)">
+                    <div class="mono font-bold text-sm mb-2" style="color:var(--copper)">02</div>
                     <h3 class="text-lg font-bold text-gray-800 mb-3">Proposta + Cronograma</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Apresentamos escopo detalhado, valores e prazo de entrega. Tudo documentado.</p>
-                    <div class="text-xs text-blue-600 font-semibold mt-3">2–5 dias</div>
+                    <div class="text-xs font-semibold mt-3 mono" style="color:var(--blueprint)">2–5 dias</div>
                 </div>
-                <div class="text-center fade-in">
-                    <div class="w-16 h-16 bg-blue-400 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg shadow-blue-200">3</div>
+                <div class="fade-in pt-6" style="border-top:2px solid var(--copper)">
+                    <div class="mono font-bold text-sm mb-2" style="color:var(--copper)">03</div>
                     <h3 class="text-lg font-bold text-gray-800 mb-3">Desenvolvimento Ágil</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Entregas parciais para validação. Você acompanha cada etapa e aprova antes de avançar.</p>
-                    <div class="text-xs text-blue-600 font-semibold mt-3">30–180 dias</div>
+                    <div class="text-xs font-semibold mt-3 mono" style="color:var(--blueprint)">30–180 dias</div>
                 </div>
-                <div class="text-center fade-in">
-                    <div class="w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold shadow-lg shadow-green-200">4</div>
+                <div class="fade-in pt-6" style="border-top:2px solid var(--check)">
+                    <div class="mono font-bold text-sm mb-2" style="color:var(--check)">04</div>
                     <h3 class="text-lg font-bold text-gray-800 mb-3">Entrega + Implantação</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Treinamento da equipe e suporte contínuo. O prazo de entrada em operação depende da assinatura do contrato e, quando necessário, do período de migração de dados de sistemas anteriores.</p>
-                    <div class="text-xs text-green-600 font-semibold mt-3">Conforme contrato</div>
+                    <div class="text-xs font-semibold mt-3 mono" style="color:var(--check)">Conforme contrato</div>
                 </div>
             </div>
             <div class="text-center mt-12 fade-in">
-                <button onclick="scrollToSection('contato')" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200">
+                <a href="#contato" class="btn-primary inline-block px-8 py-4 font-bold">
                     Agendar Reunião Gratuita
-                </button>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 bg-gray-50">
+    <section id="faq" class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-4xl">
+            <div class="ruler mb-6" aria-hidden="true"></div>
             <div class="text-center mb-16">
+                <div class="eyebrow justify-center mb-4">Folha 08 — Perguntas frequentes</div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Perguntas Frequentes</h2>
                 <p class="text-xl text-gray-600 fade-in">Respondemos as principais dúvidas sobre nossos sistemas e serviços</p>
             </div>
@@ -1077,56 +1013,56 @@
                 <details class="faq-item modern-card fade-in">
                     <summary class="font-semibold text-gray-800 text-lg flex justify-between items-center">
                         Quanto tempo leva para desenvolver um sistema personalizado?
-                        <svg class="faq-icon w-5 h-5 text-blue-600 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">O prazo varia conforme a complexidade. Sistemas simples ficam prontos em 30 a 60 dias. ERPs completos podem levar de 3 a 6 meses. Sempre definimos um cronograma claro e detalhado antes de iniciar.</p>
                 </details>
                 <details class="faq-item modern-card fade-in">
                     <summary class="font-semibold text-gray-800 text-lg flex justify-between items-center">
                         Preciso ter conhecimento técnico para contratar?
-                        <svg class="faq-icon w-5 h-5 text-blue-600 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">Não. Nossa equipe faz todo o levantamento de necessidades com você de forma simples e direta. Você explica como seu negócio funciona e nós traduzimos em tecnologia.</p>
                 </details>
                 <details class="faq-item modern-card fade-in">
                     <summary class="font-semibold text-gray-800 text-lg flex justify-between items-center">
                         Qual é o investimento para um sistema personalizado?
-                        <svg class="faq-icon w-5 h-5 text-blue-600 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">O valor varia conforme as funcionalidades necessárias. Fazemos um levantamento gratuito das suas necessidades e só então apresentamos uma proposta detalhada. Não há custos ocultos.</p>
                 </details>
                 <details class="faq-item modern-card fade-in">
                     <summary class="font-semibold text-gray-800 text-lg flex justify-between items-center">
                         Vocês atendem empresas fora de Belo Horizonte?
-                        <svg class="faq-icon w-5 h-5 text-blue-600 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">Sim, atendemos empresas em todo o Brasil. O trabalho é realizado de forma remota, com reuniões online, entregas digitais e acompanhamento constante.</p>
                 </details>
                 <details class="faq-item modern-card fade-in">
                     <summary class="font-semibold text-gray-800 text-lg flex justify-between items-center">
                         O que acontece depois da entrega do sistema?
-                        <svg class="faq-icon w-5 h-5 text-blue-600 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">Oferecemos contratos de suporte e manutenção contínua. Nosso suporte de emergência funciona 24 horas por dia, 7 dias por semana. Você nunca fica sozinho após a entrega.</p>
                 </details>
                 <details class="faq-item modern-card fade-in">
                     <summary class="font-semibold text-gray-800 text-lg flex justify-between items-center">
                         Posso solicitar novas funcionalidades depois?
-                        <svg class="faq-icon w-5 h-5 text-blue-600 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">Sim. Trabalhamos com manutenção evolutiva — você pode solicitar melhorias e novas funcionalidades a qualquer momento. O sistema cresce junto com o seu negócio.</p>
                 </details>
                 <details class="faq-item modern-card fade-in">
                     <summary class="font-semibold text-gray-800 text-lg flex justify-between items-center">
                         Como funciona o Microsoft 365 com a Codlinx?
-                        <svg class="faq-icon w-5 h-5 text-blue-600 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">Como Parceiros Oficiais Microsoft, cuidamos da contratação, configuração completa, migração de e-mails e arquivos, e treinamento da sua equipe. Suporte técnico especializado incluso.</p>
                 </details>
                 <details class="faq-item modern-card fade-in">
                     <summary class="font-semibold text-gray-800 text-lg flex justify-between items-center">
                         Vocês têm experiência no meu segmento?
-                        <svg class="faq-icon w-5 h-5 text-blue-600 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 ml-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                     </summary>
                     <p class="mt-4 text-gray-600 leading-relaxed">Com 10+ anos de mercado e mais de 50 sistemas desenvolvidos, já atendemos clínicas médicas, comércios, indústrias, distribuidoras e prestadores de serviços dos mais variados segmentos.</p>
                 </details>
@@ -1137,7 +1073,9 @@
     <!-- Contact Section -->
     <section id="contato" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
+            <div class="ruler mb-6" aria-hidden="true"></div>
             <div class="text-center mb-16">
+                <div class="eyebrow justify-center mb-4">Folha 09 — Contato</div>
                 <h2 class="text-4xl font-bold text-gray-800 mb-4 fade-in">Fale com um Especialista em Software Personalizado</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto fade-in">
                     Conte-nos sobre seu negócio e receba uma proposta personalizada sem compromisso
@@ -1145,20 +1083,20 @@
 
                 <!-- Trust signals -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 mb-4 fade-in max-w-3xl mx-auto">
-                    <div class="text-center bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                        <div class="text-2xl font-bold text-blue-600">50+</div>
+                    <div class="text-center bg-white rounded p-4" style="border:1px solid var(--border)">
+                        <div class="text-2xl font-bold mono" style="color:var(--blueprint)">50+</div>
                         <div class="text-xs text-gray-500 mt-1">Sistemas Entregues</div>
                     </div>
-                    <div class="text-center bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                        <div class="text-2xl font-bold text-blue-600">10+</div>
+                    <div class="text-center bg-white rounded p-4" style="border:1px solid var(--border)">
+                        <div class="text-2xl font-bold mono" style="color:var(--blueprint)">10+</div>
                         <div class="text-xs text-gray-500 mt-1">Anos de Mercado</div>
                     </div>
-                    <div class="text-center bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                        <div class="text-2xl font-bold text-blue-600">99%</div>
+                    <div class="text-center bg-white rounded p-4" style="border:1px solid var(--border)">
+                        <div class="text-2xl font-bold mono" style="color:var(--blueprint)">99%</div>
                         <div class="text-xs text-gray-500 mt-1">Uptime Médio</div>
                     </div>
-                    <div class="text-center bg-white rounded-xl p-4 shadow-sm border border-gray-100">
-                        <div class="text-2xl font-bold text-green-600">24/7</div>
+                    <div class="text-center bg-white rounded p-4" style="border:1px solid var(--border)">
+                        <div class="text-2xl font-bold mono" style="color:var(--check)">24/7</div>
                         <div class="text-xs text-gray-500 mt-1">Suporte de Emergência</div>
                     </div>
                 </div>
@@ -1166,13 +1104,13 @@
 
             <div class="grid lg:grid-cols-2 gap-12">
                 <div class="fade-in">
-                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+                    <div class="modern-card">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6">Informações de Contato</h3>
 
                         <div class="space-y-6">
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor"
+                                <div class="w-12 h-12 rounded flex items-center justify-center" style="background:var(--paper);border:1px solid var(--border)">
+                                    <svg class="w-6 h-6" style="color:var(--blueprint)" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
@@ -1186,8 +1124,8 @@
                             </div>
 
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor"
+                                <div class="w-12 h-12 rounded flex items-center justify-center" style="background:var(--paper);border:1px solid var(--border)">
+                                    <svg class="w-6 h-6" style="color:var(--check)" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
@@ -1197,15 +1135,15 @@
                                 <div>
                                     <div class="font-semibold text-gray-800">Telefone</div>
                                     <div class="text-gray-600">
-                                        <a href="https://wa.me/553131910305" class="text-balck-600 hover:underline">(31)
+                                        <a href="https://wa.me/553131910305" class="hover:underline">(31)
                                             3191-0305</a>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor"
+                                <div class="w-12 h-12 rounded flex items-center justify-center" style="background:var(--paper);border:1px solid var(--border)">
+                                    <svg class="w-6 h-6" style="color:var(--copper)" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
@@ -1221,7 +1159,7 @@
                             </div>
                         </div>
 
-                        <div class="mt-8 pt-8 border-t border-gray-200">
+                        <div class="mt-8 pt-8" style="border-top:1px solid var(--border)">
                             <div class="text-sm text-gray-600 mb-4">Horário de Atendimento:</div>
                             <div class="text-gray-800 font-medium">Segunda a Sexta: 8h às 20h</div>
                             <div class="text-gray-800 font-medium">Suporte de emergência: 24/7</div>
@@ -1230,7 +1168,7 @@
                 </div>
 
                 <div class="fade-in">
-                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+                    <div class="modern-card">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6">Solicite um Orçamento</h3>
 
                         <form class="space-y-6" onsubmit="handleFormSubmit(event)">
@@ -1238,13 +1176,13 @@
                                 <div>
                                     <label class="block text-gray-700 font-medium mb-2">Nome</label>
                                     <input type="text" name="name"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        class="form-field w-full px-4 py-3"
                                         placeholder="Seu nome completo" required>
                                 </div>
                                 <div>
                                     <label class="block text-gray-700 font-medium mb-2">Email</label>
                                     <input type="email" name="email"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        class="form-field w-full px-4 py-3"
                                         placeholder="seu@email.com" required>
                                 </div>
                             </div>
@@ -1253,13 +1191,13 @@
                                 <div>
                                     <label class="block text-gray-700 font-medium mb-2">Telefone</label>
                                     <input type="tel" name="phone"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        class="form-field w-full px-4 py-3"
                                         placeholder="(11) 99999-9999">
                                 </div>
                                 <div>
                                     <label class="block text-gray-700 font-medium mb-2">Empresa</label>
                                     <input type="text" name="enterprise"
-                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                        class="form-field w-full px-4 py-3"
                                         placeholder="Nome da empresa">
                                 </div>
                             </div>
@@ -1267,7 +1205,7 @@
                             <div>
                                 <label class="block text-gray-700 font-medium mb-2">Tipo de Solução</label>
                                 <select name="solution_type"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    class="form-field w-full px-4 py-3">
                                     <option>Selecione o tipo de solução</option>
                                     <option>Microsoft 365</option>
                                     <option>Sistema para Clínica</option>
@@ -1283,13 +1221,13 @@
                             <div>
                                 <label class="block text-gray-700 font-medium mb-2">Descrição do Projeto</label>
                                 <textarea rows="5" name="description"
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    class="form-field w-full px-4 py-3"
                                     placeholder="Descreva suas necessidades, quantos usuários, funcionalidades desejadas..."
                                     required></textarea>
                             </div>
 
                             <button type="submit"
-                                class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                                class="btn-primary w-full py-4 font-semibold">
                                 Enviar Solicitação
                             </button>
                             <p class="flex items-center justify-center gap-1.5 text-xs text-gray-500 mt-4">
@@ -1304,49 +1242,47 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="tech-mesh py-12" style="background:var(--band-bg);color:var(--band-fg-soft)">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div>
-                            <span class="text-xl font-bold">Codlinx</span>
-                            <div class="text-xs text-blue-400 mono">Soluções inteligentes para um mundo conectado.</div>
-                        </div>
+                    <div class="wordmark mb-4">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:22px;height:22px" aria-hidden="true"><path d="M4 4v5M4 4h5M20 4v5M20 4h-5M4 20v-5M4 20h5M20 20v-5M20 20h-5"/></svg>
+                        <span class="text-band">Codlinx<small>Soluções inteligentes para um mundo conectado</small></span>
                     </div>
 
-                    <p class="text-gray-400 mb-4">
+                    <p class="text-band-soft mb-4">
                         Desenvolvendo soluções corporativas desde 2014. Especialistas em sistemas para clínicas,
                         comércio e automações.
                     </p>
-                    <p class="text-xs text-gray-500">CNPJ: 58.942.500/0001-22 — Codlinx Tecnologia Ltda</p>
+                    <p class="text-xs mono text-band-faint">CNPJ: 58.942.500/0001-22 — Codlinx Tecnologia Ltda</p>
                 </div>
 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Soluções</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/clinicas" class="hover:text-white transition-colors">DoctorSet — Sistemas para Clínicas</a></li>
-                        <li><a href="/comercio" class="hover:text-white transition-colors">Sistemas Comerciais</a></li>
-                        <li><a href="/microsoft-365" class="hover:text-white transition-colors">Microsoft 365</a></li>
-                        <li><a href="/automacoes" class="hover:text-white transition-colors">Automações Comerciais</a></li>
+                    <h4 class="text-lg font-semibold mb-4 text-band">Soluções</h4>
+                    <ul class="space-y-2 text-band-soft">
+                        <li><a href="/clinicas" class="link-band transition-colors">DoctorSet — Sistemas para Clínicas</a></li>
+                        <li><a href="/comercio" class="link-band transition-colors">Sistemas Comerciais</a></li>
+                        <li><a href="/microsoft-365" class="link-band transition-colors">Microsoft 365</a></li>
+                        <li><a href="/automacoes" class="link-band transition-colors">Automações Comerciais</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Serviços</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/monitoramento" class="hover:text-white transition-colors">Manutenção de Servidores</a></li>
-                        <li><a href="/monitoramento" class="hover:text-white transition-colors">Monitoramento de Sistemas</a></li>
-                        <li><a href="/automacoes" class="hover:text-white transition-colors">Automações</a></li>
-                        <li><a href="#servicos" class="hover:text-white transition-colors">Soluções com IA</a></li>
+                    <h4 class="text-lg font-semibold mb-4 text-band">Serviços</h4>
+                    <ul class="space-y-2 text-band-soft">
+                        <li><a href="/monitoramento" class="link-band transition-colors">Manutenção de Servidores</a></li>
+                        <li><a href="/monitoramento" class="link-band transition-colors">Monitoramento de Sistemas</a></li>
+                        <li><a href="/automacoes" class="link-band transition-colors">Automações</a></li>
+                        <li><a href="#servicos" class="link-band transition-colors">Soluções com IA</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
-                    <ul class="space-y-2 text-gray-400">
+                    <h4 class="text-lg font-semibold mb-4 text-band">Contato</h4>
+                    <ul class="space-y-2 text-band-soft">
                         <li>contato@codlinx.com.br</li>
-                        <li><a href="https://wa.me/553131910305" class="text-black-600 hover:underline">(31)
+                        <li><a href="https://wa.me/553131910305" class="link-band transition-colors">(31)
                                 3191-0305</a></li>
                         <li>Belo Horizonte, MG - Brasil</li>
                         <li>Segunda a Sexta: 8h às 20h</li>
@@ -1354,26 +1290,21 @@
                 </div>
             </div>
 
-            <div class="border-t border-gray-800 mt-8 pt-8">
+            <div class="border-band mt-8 pt-8" style="border-top:1px solid var(--band-border)">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div class="text-gray-400 text-sm">
+                    <div class="text-band-faint text-sm">
                         <p>&copy; <script>document.write(new Date().getFullYear())</script> Codlinx. Todos os direitos reservados.</p>
                     </div>
-                    <div class="flex items-center flex-wrap justify-center gap-x-6 gap-y-3 text-sm">
-                        <a href="/privacidade" class="text-gray-400 hover:text-white transition-colors">Política de Privacidade</a>
-                        <a href="#contato" class="text-gray-400 hover:text-white transition-colors">Contato</a>
-                        <div class="bg-gray-800 rounded-lg p-3 flex items-center gap-3">
-                            <span class="text-xs text-gray-300 font-semibold whitespace-nowrap">Parceiros Oficiais</span>
-                            <div class="flex items-center gap-2">
-                                <div class="bg-white rounded p-1 h-8 w-8 flex items-center justify-center">
-                                    <img src="./assets/img/icons/microsoft.png" alt="Microsoft" class="h-4 w-auto object-contain">
-                                </div>
-                                <div class="bg-white rounded p-1 h-8 w-8 flex items-center justify-center">
-                                    <img src="./assets/img/icons/bitdefender.png" alt="Bitdefender" class="h-5 w-auto object-contain">
-                                </div>
-                                <div class="bg-white rounded p-1 h-8 w-8 flex items-center justify-center">
-                                    <img src="./assets/img/icons/dell.png" alt="Dell" class="h-4 w-auto object-contain">
-                                </div>
+                    <div class="flex items-center space-x-6 text-sm">
+                        <a href="/privacidade" class="text-band-faint link-band transition-colors">Política de Privacidade</a>
+                        <a href="#contato" class="text-band-faint link-band transition-colors">Contato</a>
+                        <div class="rounded p-3 flex items-center space-x-3" style="background:rgba(242,245,250,.08)">
+                            <svg class="w-6 h-6 text-band" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M0 0h11.377v11.372H0V0zm12.623 0H24v11.372H12.623V0zM0 12.623h11.377V24H0V12.623zm12.623 0H24V24H12.623V12.623z" />
+                            </svg>
+                            <div class="text-band text-sm">
+                                <div class="font-semibold">Parceiro Oficial</div>
+                                <div class="text-xs text-band-faint">Microsoft</div>
                             </div>
                         </div>
                     </div>
@@ -1382,35 +1313,32 @@
         </div>
     </footer>
 
-    <!-- Floating stack — bottom right -->
-    <!-- WhatsApp — acima -->
+    <!-- Floating stack — bottom left -->
     <a href="https://wa.me/553131910305?text=Olá!%20Gostaria%20de%20conhecer%20as%20soluções%20da%20Codlinx."
-       class="fixed bottom-24 left-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110"
+       class="fab-wa fixed bottom-24 left-6 z-50 rounded-full w-14 h-14 flex items-center justify-center"
        aria-label="Conversar no WhatsApp" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" class="w-8 h-8" fill="currentColor" aria-hidden="true">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
     </a>
 
-    <!-- CTA pill — abaixo do WhatsApp -->
-    <button onclick="scrollToSection('contato')"
-        class="fixed bottom-6 left-6 z-50 bg-blue-700 hover:bg-blue-800 text-white rounded-full px-5 py-3 text-sm font-bold shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
+    <a href="#contato"
+        class="fab-cta fixed bottom-6 left-6 z-50 rounded-full px-5 py-3 text-sm font-bold flex items-center gap-2"
         aria-label="Consulta gratuita">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 flex-shrink-0" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
         Consulta Gratuita
-    </button>
+    </a>
 
     <script>
-        // Smooth scroll to sections
-        function scrollToSection(id) {
-            const el = document.getElementById(id);
-            if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-
         // Mobile menu toggle
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
-            if (menu) menu.classList.toggle('hidden');
+            const btn = document.getElementById('navToggle');
+            if (menu) {
+                const willOpen = menu.classList.contains('hidden');
+                menu.classList.toggle('hidden');
+                if (btn) btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+            }
         }
 
         // Form submission handler
@@ -1446,20 +1374,13 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').slice(1);
-                scrollToSection(targetId);
-                const mobileMenu = document.getElementById('mobileMenu');
-                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
+        // Close mobile menu after navigating
+        document.querySelectorAll('#mobileMenu a').forEach(a => {
+            a.addEventListener('click', () => {
+                const menu = document.getElementById('mobileMenu');
+                if (menu && !menu.classList.contains('hidden')) menu.classList.add('hidden');
             });
         });
     </script>
 </body>
-
 </html>
